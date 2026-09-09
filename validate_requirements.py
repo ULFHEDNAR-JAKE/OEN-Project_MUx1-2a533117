@@ -17,13 +17,13 @@ def validate_requirements(file_path):
     print()
 
     expected_packages = {
-        'Flask': '3.1.2',
+        'Flask': '3.1.3',
         'Flask-SocketIO': '5.5.1',
         'Flask-SQLAlchemy': '3.1.1',
         'Flask-CORS': '6.0.1',
         'python-socketio': '5.14.3',
         'Werkzeug': '3.1.3',
-        'requests': '2.32.5',
+        'requests': '2.33.0',
         'python-engineio': '4.12.3'
     }
 
