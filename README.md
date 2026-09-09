@@ -3,6 +3,7 @@
 ## Table of Contents
 
 - [What is this?](#what-is-this)
+- [ULFHEDNAR_JAKE OEN-Project_MUx Profile](#ulfhednar_jake-oen-project_mux-profile)
 - [Use Cases](#use-cases)
 - [Features](#features)
 - [Architecture](#architecture)
@@ -23,7 +24,37 @@
 
 **OEN-Project_MUx1** is the foundation of a **MUD-style multi-user online experience server** (MUx = Multi-User eXperience). It provides the core infrastructure for running a persistent multi-user world where players can register accounts, create named characters, connect in real time, and interact through a browser-based terminal or a Python CLI client.
 
-Think of it as the back-end engine for a text-based online game or interactive shared world: users sign up, verify their email, create characters, log in, and communicate with other connected players — all through a classic MUD-inspired terminal interface powered by [xterm.js](https://xtermjs.org/) and [Socket.IO](https://socket.io/).
+Think of it as the back-end engine for a text-based online game or interactive shared world: users sign up, verify their email, create characters, log in, and interact in real time through a classic MUD-inspired terminal interface powered by [xterm.js](https://xtermjs.org/) and [Socket.IO](https://socket.io/).
+
+## ULFHEDNAR_JAKE OEN-Project_MUx Profile
+
+This repository is the active implementation of **ULFHEDNAR_JAKE's OEN-Project_MUx initiative**, focused on building a practical MUx platform that combines:
+
+- secure account onboarding (signup, email verification, login),
+- persistent character ownership per account,
+- real-time multi-user interaction through web terminal and CLI clients,
+- operational deployment paths for local development and Docker-based hosting.
+
+### Project at a glance
+
+| Item | Details |
+|------|---------|
+| Project name | OEN-Project_MUx1 |
+| Maintainer/org | ULFHEDNAR_JAKE (GitHub: `ULFHEDNAR-JAKE`) |
+| Primary runtime | Python 3.11+ |
+| Server framework | Flask + Flask-SocketIO |
+| Data layer | SQLAlchemy ORM (SQLite dev / PostgreSQL prod) |
+| Client interfaces | Browser auth UI, browser MUD terminal, Python CLI |
+| Primary protocol surfaces | REST (`/api/*`) and Socket.IO events |
+| Deployment targets | Local virtualenv and Docker Compose |
+
+### Documentation map
+
+- [README.md](README.md) — complete setup, API, and operations reference
+- [QUICKSTART.md](QUICKSTART.md) — fastest path to first local run
+- [ARCHITECTURE.md](ARCHITECTURE.md) — architecture, data flows, and component responsibilities
+- [CONTRIBUTING.md](CONTRIBUTING.md) — contribution workflow and quality expectations
+- [SECURITY.md](SECURITY.md) — vulnerability reporting and security guidance
 
 ## Use Cases
 
@@ -32,7 +63,7 @@ Think of it as the back-end engine for a text-based online game or interactive s
 | **Text-based online game (MUD/MUX)** | Provides the complete back-end: accounts, characters, real-time multi-user sessions, and a browser-based terminal |
 | **Learning project** | Demonstrates Flask, Socket.IO, SQLAlchemy, Docker, and SSH tunnels in a single working codebase |
 | **Prototype / Starter kit** | Ready-made auth + character system you can extend with game logic, rooms, items, quests, etc. |
-| **Self-hosted chat / multi-user tool** | The Socket.IO layer and `who` / messaging commands can be repurposed for any shared real-time experience |
+| **Self-hosted real-time tool** | The Socket.IO layer, auth flow, and `who` command provide a starting point for a shared real-time experience |
 | **API integration testing** | A full REST API with signup / login / verification that can serve as a mock auth backend for other projects |
 
 ---
